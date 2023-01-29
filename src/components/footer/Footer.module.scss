@@ -1,0 +1,44 @@
+.container {
+  height: var(--main-footer-mobile-height);
+  background-color: var(--main-dark);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: var(--main-light);
+  z-index: 1;
+
+  .coloums {
+    margin-top: 1rem;
+    padding-left: 1rem;
+
+    .heading {
+      border-bottom: 1px solid var(--main-primary-color);
+      display: inline;
+      padding-bottom: 0.2rem;
+    }
+  }
+
+  .list {
+    padding: 0;
+
+    .item, a {
+      list-style: none;
+      padding: 0.3rem 0;
+      @include pointer;
+
+      &:hover {
+        color: var(--main-primary-color);
+      }
+    }
+  }
+
+  @include respond-to(desktop) {
+    flex-direction: row;
+    height: var(--main-footer-desktop-height);
+
+    .coloums {
+      padding-left: 0;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.items {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 1rem auto;
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  @include respond-to(tablet) {
+    flex-direction: row;
+    margin-left: 1.2rem;
+  }
+
+  .caret {
+    padding-left: 0.3rem;
+  }
+
+  .itemText {
+    //width: 8rem;
+
+    @include respond-to(tablet) {
+      width: auto;
+    }
+  }
+}

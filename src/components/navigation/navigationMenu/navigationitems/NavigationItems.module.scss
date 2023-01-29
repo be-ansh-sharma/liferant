@@ -1,0 +1,28 @@
+.container {
+  @include respond-to(tablet) {
+    position: absolute;
+    box-shadow: var(--main-box-shadow);
+    background-color: var(--main-bg-color);
+    top: var(--main-header-height);
+    border-radius: 6px;
+  }
+  .list {
+    list-style-type: none;
+    padding: 0;
+    .item {
+      font-size: 0.8rem;
+      @include pointer;
+
+      .anchor {
+        display: block;
+        padding: 1rem;
+      }
+
+      
+      [data-theme]:not([data-theme="dark"]) &:hover {
+        background-color: var(--main-hover-color);
+        border-radius: 6px;
+      }
+    }
+  }
+}

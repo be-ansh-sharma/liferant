@@ -1,0 +1,118 @@
+@import './variables';
+@import './mixins';
+
+@font-face {
+  font-family: 'Comfortaa';
+  src: url('/fonts/Comfortaa-Regular.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mono';
+  src: url('/fonts/RobotoMono-Regular.ttf');
+  font-display: swap;
+}
+
+html {
+  font-family: "Mono", sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  background-color: var(--main-bg-color);
+  -webkit-font-smoothing: antialiased;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+div.react-toggle--checked .react-toggle-track,
+div.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
+  background-color: var(--main-primary-color);
+}
+
+.ql-container.ql-snow {
+  height: 20rem;
+}
+
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+
+ h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+ol {
+  list-style-position: inside;
+}
+
+
+
+/**
+*  CSS for transistion
+*
+*/
+
+.fadeup-enter,
+.fadeup-appear {
+  opacity: 0;
+  transform: translateY(100%);
+}
+.fadeup-enter-active,
+.fadeup-enter-done {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.fadeup-exit {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.fadeup-exit-active {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+.fadeup-enter-active ,
+.fadeup-exit-active,
+.fadeup-enter-done {
+  transition: opacity 500ms, transform 500ms;
+}
+
+.fade-enter,
+.fade-appear {
+  opacity: 0;
+}
+.fade-enter-active,
+.fade-enter-done {
+  opacity: 1;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+}
+.fade-enter-active,
+.fade-exit-active,
+.fade-enter-done {
+  transition: opacity 500ms;
+}
+
+
+.bmi {
+  .react-toggle-track {
+    background-color: var(--main-primary-color);
+  }
+
+  &.react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
+    background-color: var(--main-primary-color);
+  }
+}

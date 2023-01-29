@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 1rem;
+  user-select: text;
+
+  @include respond-to(tablet) {
+    margin: 3rem 7rem;
+  }
+
+  .wrapper {
+    margin: 2rem 0;
+    .heading {
+      text-align: center;
+      margin-bottom: 1rem;
+      line-height: 2;
+      font-size: 2rem;
+      .headingtext {
+        color: var(--main-primary-color);
+        border-bottom: 1px solid var(--main-primary-color);
+        display: inline;
+        padding-bottom: 0.5rem;
+      }
+    }
+    .para {
+      margin-bottom: 1rem;
+      display: block;
+
+      &.danger {
+        color: var(--main-danger);
+      }
+    }
+
+    .content {
+      .list {
+        list-style-position: inside;
+      }
+    }
+  }
+}

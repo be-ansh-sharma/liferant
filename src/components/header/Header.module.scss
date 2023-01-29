@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  height: var(--main-header-height);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+  background-color: var(--main-bg-color);
+  box-shadow: var(--main-box-shadow);
+
+  .bar {
+    width: 1.5rem;
+    margin-left: 1rem;
+    @include respond-to(tablet) {
+      display: none;
+    }
+
+    .barIcon {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .heading {
+    font-family: 'Comfortaa';
+    margin: auto;
+
+    @include respond-to(tablet) {
+      margin: auto 4rem;
+    }
+  }
+
+  .mode {
+    align-self: center;
+    margin: auto 1rem;
+    flex-grow: 1;
+    justify-content: flex-end;
+    display: flex;
+  }
+}

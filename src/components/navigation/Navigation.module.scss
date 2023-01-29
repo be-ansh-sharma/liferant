@@ -1,0 +1,56 @@
+.container[data-mode='desktop'] {
+  display: flex;
+  flex-grow: 1;
+
+  .list {
+    display: flex;
+    list-style-type: none;
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+
+  &:before {
+    content: '';
+    height: 40%;
+    width: 2px;
+    background-color: var(--main-text-color);
+    display: flex;
+    align-self: center;
+  }
+}
+
+.container {
+  z-index: 3;
+  height: 100%;
+  background-color: var(--main-bg-color);
+  color: var( --main-text-color);
+  box-shadow: var(--main-box-shadow);
+
+  @include respond-to(tablet) {
+    display: flex;
+    flex-grow: 1;
+    position: static;
+    width: auto;
+    box-shadow: none;
+  }
+
+  .list {
+    padding: 0;
+
+    @include respond-to(tablet) {
+      display: flex;
+      list-style-type: none;
+      font-size: 0.8rem;
+      cursor: pointer;
+
+      &:before {
+        content: '';
+        height: 40%;
+        width: 2px;
+        background-color: var(--main-text-color);
+        display: flex;
+        align-self: center;
+      }
+    }
+  }
+}

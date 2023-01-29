@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto;
+
+  .heading {
+    text-align: center;
+    font-size: 2rem;
+    margin: 1rem auto;
+  }
+
+  .image {
+    //height: 200px;
+  }
+
+  .contentWrapper {
+    display: flex;
+    justify-content: center;
+
+    @include respond-to(tablet) {
+      .ads {
+        width: 25%;
+      }
+    }
+
+    .content {
+      width: 90%;
+      line-height: 1.5;
+      user-select: auto;
+  
+      .listItem {
+        margin: 0.7rem 0;
+      }
+  
+      @include respond-to(desktop) {
+        width: 50%;
+      } 
+    }
+  }
+}

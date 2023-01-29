@@ -1,0 +1,17 @@
+.container {
+  width: 90%;
+  margin: 5rem auto;
+  word-break: break-word;
+
+  .heading {
+    color: var(--main-primary-color);
+    text-align: center;
+  }
+
+  @include respond-to(tablet) {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

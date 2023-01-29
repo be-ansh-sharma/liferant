@@ -1,0 +1,22 @@
+@mixin respond-to($point) {
+  
+  $medium: "(min-width: 600px)";
+  $large: "(min-width: 1250px)";
+  $extra-large: "(min-width: 1600px)";
+
+  @if $point == tablet {
+    @media #{$medium} { @content; }
+  }
+  @else if $point == desktop {
+    @media #{$large} { @content; }
+  }
+  @else if $point == retina {
+    @media #{$extra-large}  { @content; }
+  }
+}
+
+@mixin pointer {
+  @include respond-to(desktop) {
+    cursor: pointer;
+  }
+}

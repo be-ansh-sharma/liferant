@@ -1,0 +1,50 @@
+.container {
+  width: 90%;
+  min-height: 20rem;
+  border-radius: 20px;
+  margin-top: 4rem;
+  display: flex;
+  border: 1px solid var(--main-border-color);
+  transition: all 0.2s ease-in;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: var(--main-box-shadow);
+    border: 1px solid var(--main-border-hover-color);
+  }
+
+  @include respond-to(tablet) {
+    width: 30%;
+  }
+
+  &:hover {
+    .author {
+      color: var(--main-primary-color);
+    }
+  }
+
+  .content {
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    
+
+    .message {
+      font-size: 1.4rem;
+      flex-grow: 1;
+      text-align: left;
+
+      @include respond-to(tablet) {
+        font-size: 2rem;
+      }
+    }
+
+    .author {
+      margin: 0.5rem 0;
+      text-align: end;
+    }
+  }
+}

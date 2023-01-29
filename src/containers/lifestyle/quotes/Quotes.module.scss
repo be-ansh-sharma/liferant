@@ -1,0 +1,35 @@
+.container {
+  .end {
+    margin-top: 4rem;
+    text-align: center;
+  }
+
+  .adswrapper {
+    width: 90%;
+    margin-top: 4rem;
+
+    @include respond-to(tablet) {
+      width: 30%;
+    }
+  }
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include respond-to(tablet) {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+  .heading {
+    margin: 1rem 0.5rem;
+    line-height: 1.3;
+
+    .headingtext {
+      text-align: center;
+      font-size: 2rem;
+      margin: 2rem auto;
+    }
+  }
+}

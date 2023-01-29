@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  margin: 2rem 1rem;
+  user-select: text;
+
+  @include respond-to(tablet) {
+    margin: 3rem 7rem;
+  }
+
+  .wrapper {
+    margin: 2rem 0;
+    .heading {
+      text-align: center;
+      height: 2.5rem;
+
+      .headingtext {
+        color: var(--main-primary-color);
+        border-bottom: 1px solid var(--main-primary-color);
+        display: inline;
+        padding-bottom: 0.5rem;
+      }
+    }
+    .para {
+      margin-bottom: 1rem;
+    }
+  }
+}

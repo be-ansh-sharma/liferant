@@ -1,0 +1,113 @@
+.container {
+  height: calc(100% - var(--main-header-height));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .weight,
+  .exercise {
+    background: repeating-linear-gradient(
+        90deg,
+        dimgrey 0,
+        dimgrey 1ch,
+        transparent 0,
+        transparent 1.5ch
+      )
+      0 100%/10ch 2px no-repeat;
+    border: 0;
+    outline: none;
+    font-size: 3rem;
+    letter-spacing: 0.5ch;
+    width: 8.1rem;
+    padding: 0;
+  }
+
+
+  .weight {
+    width: 13.4rem;
+  }
+
+  .headingText {
+    margin-top: 4rem;
+    font-size: 1.5rem;
+    text-align: center;
+
+    @include respond-to(tablet) {
+      font-size: 2rem;
+    }
+  }
+
+  .heading,
+  .submit {
+    flex: 1;
+  }
+
+  .form {
+    margin: 0 1rem;
+
+    .toggle {
+      display: flex;
+      justify-content: center;
+      margin: 2rem 0;
+
+      .system {
+        margin: 0 1rem;
+
+        &.focused {
+          color: var(--main-primary-color);
+        }
+      }
+    }
+
+    .label {
+      font-size: 1rem;
+
+      @include respond-to(tablet) {
+        font-size: 1.4rem;
+      }
+    }
+
+    @include respond-to(tablet) {
+      text-align: center;
+      margin-left: 2rem;
+    }
+
+    .type,
+    .exerciseText {
+      font-size: 1rem;
+      display: inline-flex;
+
+      @include respond-to(tablet) {
+        font-size: 3rem;
+        min-width: 6rem;
+      }
+    }
+
+    .type {
+      color: var(--main-primary-color);
+    }
+
+    .exerciseContainer {
+      margin-top: 2rem;
+      
+      .exerciseText {
+        cursor: auto;
+      }
+    }
+  }
+
+  .submit {
+    display: flex;
+    align-items: center;
+    margin-top: 4rem;
+
+    span {
+      color: var(--main-light);
+    }
+  }
+
+  .error {
+    color: var(--main-danger);
+  }
+}

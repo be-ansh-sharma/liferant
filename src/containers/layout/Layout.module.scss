@@ -1,0 +1,23 @@
+.container {
+  margin-top: var(--main-header-height);
+  flex-direction: column;
+
+  @include respond-to(tablet) {
+    display: flex;
+  }
+
+
+  .content {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: var(--main-bg-color);
+    align-self: flex-start;
+
+    @include respond-to(tablet) {
+      flex-direction: row;
+      align-self: auto;
+    }
+  }
+}

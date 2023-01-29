@@ -1,0 +1,42 @@
+{
+  "1": {
+    "id": 1,
+    "title": "Truth or Dare?",
+    "description": "Get exciting Truth or Dares for different categories",
+    "link": "/lifestyle/truthordare",
+    "icon": "evil",
+    "color": "#FF1C1C"
+  },
+  "2": {
+    "id": 2,
+    "title": "Top Pick up Lines",
+    "description": "Top Tinder & Bumble Pick up lines for Men & Women",
+    "link": "/lifestyle/pickuplines",
+    "icon": "ImHappy2",
+    "color": "#00B0FF"
+  },
+  "3": {
+    "id": 3,
+    "title": "Mind Blowing Quotes",
+    "description": "Top Quotes That Will Change Your Life!",
+    "link": "/lifestyle/quotes",
+    "icon": "FaYinYang",
+    "color": "#00B0FF"
+  },
+  "4": {
+    "id": 4,
+    "title": "Daily Water Intake Calculator",
+    "description": "Learn how many ml of water you should be drinking!",
+    "link": "/widgets/watercalculator",
+    "icon": "GiFireBottle",
+    "color": "#00B0FF"
+  },
+  "5": {
+    "id": 2,
+    "title": "Body Mass Index (BMI) Calculator",
+    "description": "Check your Body Mass Index (BMI)",
+    "link": "/widgets/bmicalculator",
+    "icon": "FaHandHoldingHeart",
+    "color": "#00B0FF"
+  }
+}

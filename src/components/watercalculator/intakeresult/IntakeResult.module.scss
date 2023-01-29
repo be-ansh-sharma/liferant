@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  flex-direction: column;
+
+  .headingContainer {
+    flex-direction: column;
+    display: flex;
+
+    .back {
+      display: inline-flex;
+      font-size: 1.5rem;
+      margin: 1rem 1rem;
+    }
+
+    .icon {
+      color: var(--main-primary-color);
+      transition: transform 0.2s ease-in-out;;
+      transform: translateX(0);
+      @include pointer;
+
+      &:hover {
+        transform: translateX(-20%);
+      }
+    }
+
+    .heading {
+      text-align: center;
+      font-size: 1.5rem;
+      flex: 1;
+      font-size: 2rem;
+      margin-top: 2rem;
+    }
+
+    @include respond-to(tablet) {
+      flex-direction: row;
+      .back {
+        align-self: center;
+        margin: 0 2rem;
+        position: absolute;
+      }
+
+      .heading {
+       font-size: 2.5rem;
+      }
+    }
+  }
+
+  .goal {
+    color: var(--main-primary-color);
+  }
+}

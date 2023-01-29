@@ -1,0 +1,26 @@
+{
+  "1": {
+    "id": "teens",
+    "title": "Teens",
+    "description": "Have fun with your friends",
+    "link": "./truthordare/teens",
+    "icon": "ImHappy2",
+    "color": "#00B0FF"
+  },
+  "2": {
+    "id": "classic",
+    "title": "Classic",
+    "description": "Top Truth or Dares for a classic game",
+    "link": "./truthordare/classic",
+    "icon": "ImHappy2",
+    "color": "#00B0FF"
+  },
+  "3": {
+    "id": "couplenormal",
+    "title": "Couples (Normal)",
+    "description": "Top Truth or Dares for couples",
+    "link": "./truthordare/couplenormal",
+    "icon": "ImHappy2",
+    "color": "#00B0FF"
+  }
+}

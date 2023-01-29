@@ -1,0 +1,18 @@
+{
+  "1": {
+    "id": "formen",
+    "title": "For Men",
+    "description": "Top Tinder & Bumble Pick up lines for Men",
+    "link": "./pickuplines/formen",
+    "icon": "evil",
+    "color": "#FF1C1C"
+  },
+  "2": {
+    "id": "forgirls",
+    "title": "For Girls",
+    "description": "Top Tinder & Bumble Pick up lines for Girls",
+    "link": "./pickuplines/formen",
+    "icon": "ImHappy2",
+    "color": "#00B0FF"
+  }
+}
