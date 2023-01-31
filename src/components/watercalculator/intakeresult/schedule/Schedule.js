@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-// import TimePicker from 'react-time-picker';
+//import TimePicker from 'react-time-picker';
+import TimePicker from 'react-time-picker/dist/entry.nostyle';
 import styles from './Schedule.module.scss';
 import { IoArrowForwardCircleOutline } from 'react-icons/io5';
 import { calculateSchedule } from 'utils/water';
@@ -80,9 +81,9 @@ const Schedule = ({ person }) => {
     <div className={styles.container}>
       <h4 className={styles.heading}>Tell us your sleep and wake-up time</h4>
       <div className={styles.pickers}>
-        {/* <TimePicker onChange={setSleep} value={sleep} {...timerProps} /> */}
+        <TimePicker onChange={setSleep} value={sleep} {...timerProps} />
         <span className={styles.divider}>-</span>
-        {/* <TimePicker onChange={setWake} value={wake} {...timerProps} /> */}
+        <TimePicker onChange={setWake} value={wake} {...timerProps} />
         <IoArrowForwardCircleOutline
           className={styles.submit}
           onClick={submitHandler}

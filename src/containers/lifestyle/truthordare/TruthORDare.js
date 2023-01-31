@@ -3,7 +3,7 @@ import Image from 'next/image';
 import styles from './TruthORDare.module.scss';
 import Playstore from 'components/playstore/Playstore';
 import Ads from 'components/ads/Ads';
-import { links } from 'config/header.json';
+import HEADERCONFIG from 'config/header.json';
 import useMobileComponent from 'hooks/useMobileComponent';
 
 const ImageAttr = {
@@ -13,7 +13,10 @@ const ImageAttr = {
   style: {
     width: '100%',
   },
+  priority: true,
 };
+
+const links = HEADERCONFIG.links;
 
 const TruthORDare = ({ category }) => {
   let categoryData =

@@ -2,15 +2,33 @@ import Head from 'next/head';
 import Loading from 'components/loading/Loading';
 import TDCONFIG from 'config/truthordare.json';
 import TruthORDare from 'containers/lifestyle/truthordare/TruthORDare';
+import headerconfig from 'config/header.json';
 
 const Index = ({ category }) => {
   if (!category) {
     return <Loading lines={4} />;
   }
 
+  let titleText;
+  switch (category) {
+    case 'teens':
+      titleText = `Top Truth or Dares for Teens - ${headerconfig.brandName}`;
+      break;
+    case 'classic':
+      titleText = `Classic Truth or Dares - ${headerconfig.brandName}`;
+      break;
+    case 'couplenormal':
+      titleText = `Top Truth or Dares for Couples - ${headerconfig.brandName}`;
+      break;
+    default:
+      titleText = `Truth or Dare - ${headerconfig.brandName}`;
+  }
+
   return (
     <>
-      <Head></Head>
+      <Head>
+        <title>{titleText}</title>
+      </Head>
       <TruthORDare category={category} />
     </>
   );

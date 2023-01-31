@@ -2,15 +2,24 @@ import Head from 'next/head';
 import Loading from 'components/loading/Loading';
 import PickupLines from 'containers/lifestyle/pickuplines/PickupLines';
 import PICKUPCATEGORY from 'config/pickuplines.json';
+import headerconfig from 'config/header.json';
 
 const Index = ({ category }) => {
   if (!category) {
     return <Loading lines={4} />;
   }
 
+  let titleText = `${
+    category === 'formen'
+      ? 'Top Pick up lines for Men'
+      : 'Top Pick up lines for Woemen'
+  } - ${headerconfig.brandName}`;
+
   return (
     <>
-      <Head></Head>
+      <Head>
+        <title>{titleText}</title>
+      </Head>
       <PickupLines category={category} />
     </>
   );

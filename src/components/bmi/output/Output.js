@@ -1,7 +1,9 @@
 import React from 'react';
 import styles from './Output.module.scss';
-import { FaArrowLeft } from 'react-icons/fa';
-import { BMIRANGE, BMICOLOR } from 'config/bmi.json';
+import BMICONFIG from 'config/bmi.json';
+
+const BMIRANGE = BMICONFIG.BMIRANGE;
+const BMICOLOR = BMICONFIG.BMICOLOR;
 
 const Output = ({ person }) => {
   const getDisplayRange = bmi => {

@@ -13,10 +13,18 @@ const Footer = () => {
           </li>
           <li className={styles.item}>
             <Link
-              href="https://ko-fi.com/ntrholic"
+              href="https://ko-fi.com/liferant"
               passHref={false}
               target="_blank">
               Buy me a Coffee
+            </Link>
+          </li>
+          <li className={styles.item}>
+            <Link
+              href="https://play.google.com/store/apps/dev?id=7526734186437937977"
+              passHref={false}
+              target="_blank">
+              Apps
             </Link>
           </li>
         </ul>

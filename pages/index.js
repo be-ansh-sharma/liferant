@@ -13,7 +13,7 @@ export default function Index() {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           name="description"
-          content="Get random information and widgets for your day to day life. Daily Water Intake calculator, Truth or Dares and many more."
+          content="Get random information and widgets for your day to day life. Daily Water Intake calculator, Truth or Dares, top quotes and many more."
         />
       </Head>
       <Grid list={categoryconfig} />
