@@ -4,7 +4,11 @@ import styles from './Playstore.module.scss';
 
 const Playstore = ({ link }) => {
   return (
-    <a className={styles.container} href={link} target="_blank">
+    <a
+      className={styles.container}
+      href={link}
+      target="_blank"
+      rel="noreferrer">
       <FaGooglePlay className={styles.icon} />
     </a>
   );

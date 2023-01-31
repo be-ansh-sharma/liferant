@@ -156,7 +156,7 @@ const Input = ({ person, resultHandler }) => {
                   className={styles.feet}
                   onChange={event => heightChangeHandler(event, 'feet')}
                 />
-                <span className={styles.heightlabel}>'</span>
+                <span className={styles.heightlabel}>&apos;</span>
                 <input
                   type="text"
                   name="height"
@@ -165,7 +165,7 @@ const Input = ({ person, resultHandler }) => {
                   className={styles.inch}
                   onChange={event => heightChangeHandler(event, 'inch')}
                 />
-                <span className={styles.heightlabel}>"</span>
+                <span className={styles.heightlabel}>&quot;</span>
               </label>
             )}
           </div>
