@@ -14,6 +14,10 @@ function MyApp({ Component, pageProps }) {
     <ChakraProvider theme={theme}>
       <Head>
         <link rel="shortcut icon" href="/favicon.ico" />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2290547364208155"
+          crossOrigin="anonymous"></script>
       </Head>
       <ColorModeScript initialColorMod={styling.config.initialColorMode} />
       <Layout>{getCustomAside(<Component {...pageProps} />)}</Layout>
