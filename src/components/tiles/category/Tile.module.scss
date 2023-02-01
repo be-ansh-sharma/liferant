@@ -11,7 +11,6 @@
   border: 2px solid var(--main-border-color);
   transition: all 0.2s ease-in;
   text-decoration: none;
-  cursor: pointer;
 
   &:hover {
     box-shadow: var(--main-box-shadow);
@@ -24,7 +23,12 @@
   }
 
   @include respond-to(tablet) {
+    margin: 2rem;
+  }
+
+  @include respond-to(desktop) {
     margin: 4rem;
+    cursor: pointer;
   }
 
   &:hover {
