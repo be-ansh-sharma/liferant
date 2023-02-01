@@ -1,6 +1,6 @@
 {
   "config": {
-    "initialColorMode": "dark"
+    "initialColorMode": "light"
   },
   "fonts": {
     "body": "`Mono`, sans-serif",

@@ -2,14 +2,15 @@
   "brandName": "LifeRant",
   "brandNameFormatted": "LifeRant",
   "items": {
-    "Widgets": {
-      "Water Calculator": "/widgets/watercalculator",
-      "BMI Calculator": "/widgets/bmicalculator"
-    },
     "Life Style": {
       "Truth or Dare": "/lifestyle/truthordare",
       "Pick Up Lines": "/lifestyle/pickuplines",
       "Quotes": "/lifestyle/quotes"
+    },
+    "Widgets": {
+      "Water Calculator": "/widgets/watercalculator",
+      "BMI Calculator": "/widgets/bmicalculator",
+      "Secrets in Bottle": "/widgets/secretsinbottle"
     }
   },
   "links": {

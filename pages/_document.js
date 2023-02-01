@@ -21,7 +21,7 @@ export default function Document() {
         </Script>
       </Head>
       <body>
-        <ColorModeScript initialColorMode="dark" />
+        <ColorModeScript initialColorMode="light" />
         <Main />
         <NextScript />
       </body>
