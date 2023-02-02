@@ -36,6 +36,15 @@ const Header = () => {
                 }}></a>
             </Link>
           </h2>
+          <div className={styles.modewrapper}>
+            <label htmlFor="Dark Mode" className={styles.mode}>
+              <Toggle
+                defaultChecked={colorMode === 'light'}
+                icons={false}
+                onChange={toggleColorMode}
+              />
+            </label>
+          </div>
           <Drawer placement="left" onClose={onClose} isOpen={isOpen} size="xs">
             <DrawerOverlay />
             <DrawerContent>
