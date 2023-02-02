@@ -44,7 +44,7 @@ const Ads = ({ type, slot }) => {
   //     break;
   // }
   // return <div>{CMP}</div>;
-  return <></>
+  return <></>;
 };
 
 export default Ads;
