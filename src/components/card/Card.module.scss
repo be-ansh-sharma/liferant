@@ -7,7 +7,6 @@
   border: 1px solid var(--main-border-color);
   transition: all 0.2s ease-in;
   text-decoration: none;
-  cursor: pointer;
 
   &:hover {
     box-shadow: var(--main-box-shadow);
@@ -20,6 +19,7 @@
 
   @include respond-to(desktop) {
     width: 30%;
+    cursor: pointer;
   }
 
   &:hover {
