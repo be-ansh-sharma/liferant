@@ -2,6 +2,7 @@ import React from 'react';
 import BMICalculator from 'containers/widgets/bmicalculator/BMICalculator';
 import Head from 'next/head';
 import headerconfig from 'config/header.json';
+import Recommendations from 'components/recommendations/Recommendations';
 
 const Index = () => {
   let titleText = `BMI Calculator - ${headerconfig.brandName}`;
@@ -16,6 +17,7 @@ const Index = () => {
         <title>{titleText}</title>
       </Head>
       <BMICalculator />
+      <Recommendations skip="bmicalculator" />
     </>
   );
 };

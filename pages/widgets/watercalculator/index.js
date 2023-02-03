@@ -3,6 +3,7 @@ import WaterIntake from 'containers/widgets/waterintake/WaterIntake';
 import Playstore from 'components/playstore/Playstore';
 import Head from 'next/head';
 import headerconfig from 'config/header.json';
+import Recommendations from 'components/recommendations/Recommendations';
 
 const WaterCalculator = () => {
   let titleText = `Daily Water Intake Calculator - ${headerconfig.brandName}`;
@@ -16,6 +17,7 @@ const WaterCalculator = () => {
         <title>{titleText}</title>
       </Head>
       <WaterIntake />
+      <Recommendations skip="watercalculator" />
       <Playstore link={headerconfig.links.drinkingbuddy} />
     </>
   );

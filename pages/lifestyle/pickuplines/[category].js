@@ -3,6 +3,7 @@ import Loading from 'components/loading/Loading';
 import PickupLines from 'containers/lifestyle/pickuplines/PickupLines';
 import PICKUPCATEGORY from 'config/pickuplines.json';
 import headerconfig from 'config/header.json';
+import Recommendations from 'components/recommendations/Recommendations';
 
 const Index = ({ category }) => {
   if (!category) {
@@ -21,6 +22,7 @@ const Index = ({ category }) => {
         <title>{titleText}</title>
       </Head>
       <PickupLines category={category} />
+      <Recommendations skip={category} />
     </>
   );
 };

@@ -289,3 +289,12 @@ ol {
 .react-clock__second-hand__body {
   background-color: red;
 }
+
+.react-multi-carousel-item {
+  display: flex;
+  justify-content: center;
+}
+
+.react-multiple-carousel__arrow {
+  background-color: var(--main-primary-color) !important;
+}

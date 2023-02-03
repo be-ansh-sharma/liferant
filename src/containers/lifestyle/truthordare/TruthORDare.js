@@ -39,7 +39,7 @@ const TruthORDare = ({ category }) => {
               __html: categoryData.description,
             }}></div>
           <div>
-            <h2>Truth for {categoryData.name}</h2>
+            <h2 className={styles.subHeading}>Truth for {categoryData.name}</h2>
             <ol>
               {categoryData.content.truth.map((str, index) => {
                 if ((index + 1) % 75 == 0) {

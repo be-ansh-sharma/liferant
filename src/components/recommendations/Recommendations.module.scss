@@ -1,0 +1,33 @@
+.container {
+  .heading {
+    display: flex;
+    font-size: 2rem;
+    justify-content: center;
+    font-family: 'Comfortaa';
+    text-align: center;
+    font-weight: bold;
+    color: var(--main-primary-color);
+  }
+
+  .itemContainer {
+    .item {
+      display: flex;
+      height: 6rem;
+      width: 10rem;
+      justify-content: center;
+      align-items: center;
+      border-radius: 30px;
+      border: 2px solid var(--main-border-color);
+      transition: all 0.2s ease-in;
+      text-decoration: none;
+    
+      &:hover {
+        box-shadow: var(--main-box-shadow);
+      }
+  
+      .iconContainer {
+        padding-right: 0.5rem;
+      }
+    }
+  }
+}

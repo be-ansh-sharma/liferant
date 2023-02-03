@@ -10,14 +10,16 @@
   .content {
     min-height: 100vh;
     position: relative;
-    display: flex;
     justify-content: center;
     background-color: var(--main-bg-color);
     align-self: flex-start;
+    display: flex;
+    flex-direction: column;
 
     @include respond-to(tablet) {
-      flex-direction: row;
+      flex-direction: column;
       align-self: auto;
+      justify-content: flex-start;
     }
   }
 }

@@ -1,6 +1,7 @@
 import Quotes from 'containers/lifestyle/quotes/Quotes';
 import headerconfig from 'config/header.json';
 import Head from 'next/head';
+import Recommendations from 'components/recommendations/Recommendations';
 
 const Index = () => {
   let titleText = `Mind Blowing Quotes - ${headerconfig.brandName}`;
@@ -14,6 +15,7 @@ const Index = () => {
         <title>{titleText}</title>
       </Head>
       <Quotes />
+      <Recommendations skip="quotes" />
     </>
   );
 };

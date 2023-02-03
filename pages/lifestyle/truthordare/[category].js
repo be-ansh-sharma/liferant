@@ -3,6 +3,7 @@ import Loading from 'components/loading/Loading';
 import TDCONFIG from 'config/truthordare.json';
 import TruthORDare from 'containers/lifestyle/truthordare/TruthORDare';
 import headerconfig from 'config/header.json';
+import Recommendations from 'components/recommendations/Recommendations';
 
 const Index = ({ category }) => {
   if (!category) {
@@ -30,6 +31,7 @@ const Index = ({ category }) => {
         <title>{titleText}</title>
       </Head>
       <TruthORDare category={category} />
+      <Recommendations skip={category} />
     </>
   );
 };
