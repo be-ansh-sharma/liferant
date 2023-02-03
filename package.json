@@ -14,7 +14,6 @@
     "@emotion/styled": "^11.10.5",
     "@next/font": "13.1.5",
     "dayjs": "^1.11.7",
-    "embla-carousel-react": "^7.0.9",
     "firebase": "^9.16.0",
     "framer-motion": "^8.5.3",
     "lottie-web": "^5.10.2",
