@@ -2,7 +2,7 @@ import { GiBookshelf, GiFireBottle, GiFishing } from 'react-icons/gi';
 import { FaArrowLeft } from 'react-icons/fa';
 import { TbDeviceMobileMessage } from 'react-icons/tb';
 import { IoWaterOutline, IoSettingsOutline } from 'react-icons/io5';
-import { ImEvil2, ImHappy2 } from 'react-icons/im';
+import { ImEvil2, ImHappy2, ImBin2 } from 'react-icons/im';
 import { FaYinYang, FaHandHoldingHeart } from 'react-icons/fa';
 
 const Icon = ({ name, style, className }) => {
@@ -22,6 +22,9 @@ const Icon = ({ name, style, className }) => {
       break;
     case 'FaYinYang':
       CMP = FaYinYang;
+      break;
+    case 'ImBin2':
+      CMP = ImBin2;
       break;
     case 'FaHandHoldingHeart':
       CMP = FaHandHoldingHeart;

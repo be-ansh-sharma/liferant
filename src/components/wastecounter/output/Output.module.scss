@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  .info {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .tile {
+    margin-top: 1rem;
+
+    .number {
+      color: var(--main-primary-color);
+      width: 5rem;
+    }
+  }
+}

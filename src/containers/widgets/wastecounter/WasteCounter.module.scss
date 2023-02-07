@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+
+  @include respond-to(tablet) {
+    flex: none;
+    justify-content: center;
+  }
+
+  .heading {
+    margin: 1rem 0;
+    display: flex;
+    width: 100%;
+    .headingText {
+      font-size: 1.5rem;
+      text-align: center;
+      flex-grow: 1;
+      color: var(--main-primary-color);
+  
+      @include respond-to(tablet) {
+        font-size: 2rem;
+      }
+    }
+
+    .back {
+      display: inline-flex;
+      font-size: 1.5rem;
+      margin: 1rem 1rem;
+      position: fixed;
+    }
+  
+    .icon {
+      color: var(--main-primary-color);
+      transition: transform 0.2s ease-in-out;;
+      transform: translateX(0);
+      @include pointer;
+  
+      &:hover {
+        transform: translateX(-20%);
+      }
+    }
+  }
+}

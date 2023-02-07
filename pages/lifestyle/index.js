@@ -1,10 +1,12 @@
 import Head from 'next/head';
 import headerconfig from 'config/header.json';
-import LIFESTYLE from 'config/lifestyle.json';
 import Grid from 'containers/grid/Grid';
+import CATEGORIES from 'config/categories.json';
+import { getCategories } from 'utils/Utils';
 
 export default function Index() {
   let titleText = `Life Style - ${headerconfig.brandName}`;
+  let LIFESTYLE = getCategories(CATEGORIES, 'lifestyle');
 
   return (
     <>

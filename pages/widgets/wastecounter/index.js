@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import headerconfig from 'config/header.json';
-import SecretBottle from 'containers/widgets/secretbottle/SecretBottle';
+import WasteCounter from 'containers/widgets/wastecounter/WasteCounter';
 
 export default function Index() {
-  let titleText = `Secrets In Bottle - ${headerconfig.brandName}`;
+  let titleText = `Waste Counter - ${headerconfig.brandName}`;
 
   return (
     <>
@@ -12,10 +12,10 @@ export default function Index() {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           name="description"
-          content="Write your secret confessions and throw it away for others to find!"
+          content="Calculate how much time you have wasted!"
         />
       </Head>
-      <SecretBottle />
+      <WasteCounter />
     </>
   );
 }

@@ -1,10 +1,12 @@
 import Head from 'next/head';
 import headerconfig from 'config/header.json';
-import WIDGETS from 'config/widgets.json';
+import CATEGORIES from 'config/categories.json';
 import Grid from 'containers/grid/Grid';
+import { getCategories } from 'utils/Utils';
 
 export default function Index() {
   let titleText = `Widgets - ${headerconfig.brandName}`;
+  let widgets = getCategories(CATEGORIES, 'widget');
 
   return (
     <>
@@ -16,7 +18,7 @@ export default function Index() {
           content="Get random information and widgets for your day to day life. Daily Water Intake calculator, Truth or Dares and many more."
         />
       </Head>
-      <Grid list={WIDGETS} />
+      <Grid list={widgets} />
     </>
   );
 }

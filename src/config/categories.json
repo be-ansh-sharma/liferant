@@ -3,6 +3,7 @@
     "title": "Truth or Dare?",
     "description": "Get exciting Truth or Dares for different categories",
     "link": "/lifestyle/truthordare",
+    "type": "lifestyle",
     "icon": "evil",
     "color": "#FF1C1C"
   },
@@ -10,6 +11,7 @@
     "title": "Top Pick up Lines",
     "description": "Top Tinder & Bumble Pick up lines for Men & Women",
     "link": "/lifestyle/pickuplines",
+    "type": "lifestyle",
     "icon": "ImHappy2",
     "color": "#00B0FF"
   },
@@ -17,6 +19,7 @@
     "title": "Mind Blowing Quotes",
     "description": "Top Quotes That Will Change Your Life!",
     "link": "/lifestyle/quotes",
+    "type": "lifestyle",
     "icon": "FaYinYang",
     "color": "#00B0FF"
   },
@@ -24,13 +27,15 @@
     "title": "Daily Water Intake Calculator",
     "description": "Learn how many ml of water you should be drinking!",
     "link": "/widgets/watercalculator",
-    "icon": "GiFireBottle",
+    "type": "widget",
+    "icon": "IoWaterOutline",
     "color": "#00B0FF"
   },
   "bmicalculator": {
     "title": "Body Mass Index (BMI) Calculator",
     "description": "Check your Body Mass Index (BMI)",
     "link": "/widgets/bmicalculator",
+    "type": "widget",
     "icon": "FaHandHoldingHeart",
     "color": "#00B0FF"
   },
@@ -38,7 +43,16 @@
     "title": "Secrets In The Bottle",
     "description": "Write your secrets and throw it away for others to find!",
     "link": "/widgets/secretsinbottle",
+    "type": "widget",
     "icon": "GiFireBottle",
+    "color": "#00B0FF"
+  },
+  "wastecounter": {
+    "title": "Waste Counter",
+    "description": "Calculate how much times you have wasted",
+    "link": "/widgets/wastecounter",
+    "type": "widget",
+    "icon": "ImBin2",
     "color": "#00B0FF"
   }
 }

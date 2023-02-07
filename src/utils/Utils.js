@@ -76,6 +76,32 @@ const shuffleArray = array => {
   return array;
 };
 
+const getCategories = (list, type) => {
+  Object.keys(list).map(entry => {
+    if (list[entry].type != type) {
+      delete list[entry];
+    }
+  });
+  return list;
+};
+
+const getDiff = (date, mode) => {
+  return dayjs().diff(date, mode);
+};
+
+const getBirthdayData = date => {
+  date = dayjs(date);
+  return {
+    years: getDiff(date, 'year'),
+    month: getDiff(date, 'month'),
+    week: getDiff(date, 'week'),
+    day: getDiff(date, 'day'),
+    hour: getDiff(date, 'hour'),
+    minute: getDiff(date, 'minute'),
+    seconds: getDiff(date, 'second'),
+  };
+};
+
 module.exports = {
   toSeoUrl,
   transformTime,
@@ -85,4 +111,6 @@ module.exports = {
   shorthandNumber,
   isBrowser,
   shuffleArray,
+  getCategories,
+  getBirthdayData,
 };

@@ -10,7 +10,8 @@
     "Widgets": {
       "Water Calculator": "/widgets/watercalculator",
       "BMI Calculator": "/widgets/bmicalculator",
-      "Secrets in Bottle": "/widgets/secretsinbottle"
+      "Secrets in Bottle": "/widgets/secretsinbottle",
+      "Waste Counter": "/widgets/wastecounter"
     }
   },
   "links": {
