@@ -4,7 +4,11 @@ const nextConfig = {
   swcMinify: true,
   sassOptions: {
     additionalData: `@import "src/styles/mixins.scss";`,
-  }
+  },
 };
 
-module.exports = nextConfig;
+const withPWA = require('next-pwa')({
+  dest: 'public',
+});
+
+module.exports = withPWA(nextConfig);
