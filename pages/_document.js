@@ -19,6 +19,7 @@ export default function Document() {
           gtag('config', 'G-ZJMZZKFCT8');
         `}
         </Script>
+        <link rel="manifest" href="/manifest.json" />
       </Head>
       <body>
         <ColorModeScript initialColorMode="light" />
