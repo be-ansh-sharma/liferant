@@ -54,5 +54,21 @@
     "type": "widget",
     "icon": "ImBin2",
     "color": "#00B0FF"
+  },
+  "restreminder": {
+    "title": "Rest Reminder",
+    "description": "We will let you know when to take a rest",
+    "link": "/widgets/restreminder",
+    "type": "widget",
+    "icon": "ImBin2",
+    "color": "#00B0FF"
+  },
+  "blogs": {
+    "title": "Random Blogs",
+    "description": "Get Random news, trivias, and facts about lifestyles, games and programming.",
+    "link": "/blogs",
+    "type": "blogs",
+    "icon": "FcNews",
+    "color": ""
   }
 }

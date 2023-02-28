@@ -1,0 +1,59 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  justify-content: center;
+
+  @include respond-to(tablet) {
+    width: 60%;
+  }
+  
+  .banner {
+    height: 30rem;
+    width: 100%;
+    position: relative;
+
+    .image {
+      object-fit: contain;
+    }
+  }
+
+  .heading {
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Comfortaa";
+    margin-top: 2rem;
+
+    @include respond-to(tablet) {
+      font-size: 2.5rem;
+    }
+  }
+
+  .metric {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+
+    @include respond-to(tablet) {
+      position: relative;
+      bottom: 10px;
+      font-size: 0.8rem;
+    }
+
+    .author {
+      color: var(--main-primary-color);
+    }
+  }
+
+  .content {
+    margin: 2rem 0;
+  }
+
+  .quote {
+    font-size: 2rem;
+    font-style: italic;
+    margin: 1rem 0;
+    text-align: center;
+  }
+}

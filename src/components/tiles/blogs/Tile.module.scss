@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  //justify-content: space-between;
   margin: 2rem 0;
   text-align: center;
   border-radius: 30px;
@@ -17,9 +17,15 @@
   }
 
   .title {
-    @include respond-to(tablet) {
-      width: 90%;
-    }
+    font-weight: bold;
+    font-family: "Comfortaa";
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+
+  .quote {
+    margin-top: 1rem;
+    font-style: italic;
   }
 
   @include respond-to(tablet) {
@@ -35,21 +41,14 @@
     border: 1px solid var(--main-border-hover-color);
   }
 
-  .iconContainer {
-    border: 1px solid var(--main-border-color);
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  .imageWrapper {
+    //position:static;
 
-  .description {
-    border-top: 1px solid var(--main-border-color);
-    text-align: center;
-    width: 92%;
-    height: 4rem;
-    padding-top: 0.5rem;
+    .image {
+      object-fit: cover;
+      border-top-right-radius: 30px;
+      border-top-left-radius: 30px;
+      position: relative;
+    }
   }
 }

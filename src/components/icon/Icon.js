@@ -4,6 +4,7 @@ import { TbDeviceMobileMessage } from 'react-icons/tb';
 import { IoWaterOutline, IoSettingsOutline } from 'react-icons/io5';
 import { ImEvil2, ImHappy2, ImBin2 } from 'react-icons/im';
 import { FaYinYang, FaHandHoldingHeart } from 'react-icons/fa';
+import { FcNews } from 'react-icons/fc';
 
 const Icon = ({ name, style, className }) => {
   let CMP;
@@ -43,6 +44,9 @@ const Icon = ({ name, style, className }) => {
       break;
     case 'TbDeviceMobileMessage':
       CMP = TbDeviceMobileMessage;
+      break;
+    case 'FcNews':
+      CMP = FcNews;
       break;
   }
   if (!CMP) {

@@ -1,6 +1,9 @@
 import dayjs from './dayconfig';
 
 const isBrowser = typeof window !== 'undefined';
+const hasNotifications = isBrowser
+  ? typeof Notification !== 'undefined'
+  : false;
 
 const toSeoUrl = url => {
   return url
@@ -16,7 +19,7 @@ const toSeoUrl = url => {
     .replace(/-*$/, ''); // Remove trailing dashes
 };
 
-const transformTime = (date, pattern) => dayjs(date).format(pattern);
+const transformDate = (date, pattern) => dayjs(date).format(pattern);
 
 const transformDoc = doc => {
   if (doc) {
@@ -102,9 +105,32 @@ const getBirthdayData = date => {
   };
 };
 
+const hasNotificationPremission = () =>
+  hasNotifications ? Notification.permission == 'granted' : false;
+
+const getNotificationPermission = async () => {
+  if (!hasNotificationPremission()) {
+    return Notification.requestPermission().then(permission => permission);
+  } else {
+    return 'granted';
+  }
+};
+
+const sendNotification = () => {
+  navigator.serviceWorker.ready.then(registration => {
+    registration.showNotification('Vibration Sample', {
+      body: 'Buzz! Buzz!',
+      timestamp: 1676326728068,
+      icon: '/icons/android-chrome-192x192.png',
+      vibrate: [200, 100, 200, 100, 200, 100, 200],
+      tag: 'vibration-sample',
+    });
+  });
+};
+
 module.exports = {
   toSeoUrl,
-  transformTime,
+  transformDate,
   transformDoc,
   sortByDate,
   sortByValue,
@@ -113,4 +139,7 @@ module.exports = {
   shuffleArray,
   getCategories,
   getBirthdayData,
+  getNotificationPermission,
+  hasNotificationPremission,
+  hasNotifications,
 };

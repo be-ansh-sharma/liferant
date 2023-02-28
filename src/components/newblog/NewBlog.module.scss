@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  width: 100%;
+
+  .formWrapper {
+    width: 90%;
+    margin-bottom: 1rem;
+
+    @include respond-to(tablet) {
+      width: 50%;
+    }
+
+    .form {
+      margin-top: 1rem;
+      .submit {
+        margin-top: 1rem;
+        justify-content: flex-end;
+        display: flex;
+      }
+    }
+  }
+}

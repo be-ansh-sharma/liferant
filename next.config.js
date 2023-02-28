@@ -5,6 +5,17 @@ const nextConfig = {
   sassOptions: {
     additionalData: `@import "src/styles/mixins.scss";`,
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'firebasestorage.googleapis.com',
+        port: '',
+        pathname: '**',
+      },
+    ],
+    minimumCacheTTL: 86400,
+  },
 };
 
 const withPWA = require('next-pwa')({

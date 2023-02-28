@@ -12,7 +12,8 @@
       "BMI Calculator": "/widgets/bmicalculator",
       "Secrets in Bottle": "/widgets/secretsinbottle",
       "Waste Counter": "/widgets/wastecounter"
-    }
+    },
+    "Blogs": "/blogs" 
   },
   "links": {
     "truthordare": "https://play.google.com/store/apps/details?id=com.epoch.truthordare",

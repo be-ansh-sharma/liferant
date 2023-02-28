@@ -50,7 +50,45 @@ const saveDocument = async (table, document, data) => {
   }
 };
 
+const getAllBlogs = async () => {
+  let blogs = [];
+  const querySnapshot = await getDocs(collection(db, 'blogs'));
+  querySnapshot.forEach(doc => {
+    blogs.push({
+      refId: doc.id,
+      ...doc.data(),
+    });
+  });
+  return blogs;
+};
+
+const getBlog = async blogID => {
+  let blog;
+  const q = query(collection(db, 'blogs'), where('seoTitle', '==', blogID));
+  const querySnapshot = await getDocs(q);
+  querySnapshot.forEach(doc => {
+    blog = {
+      ...doc.data(),
+      refId: doc.id,
+    };
+  });
+  return blog;
+};
+
+const createBlog = async (blog, edit, oldTitle) => {
+  let blogRef;
+  if (edit) {
+    blogRef = await saveDocument('blogs', oldTitle, blog);
+  } else {
+    blogRef = await saveDocument('blogs', null, blog);
+  }
+  return blogRef;
+};
+
 module.exports = {
   getRandomDocument,
   saveDocument,
+  getAllBlogs,
+  getBlog,
+  createBlog,
 };

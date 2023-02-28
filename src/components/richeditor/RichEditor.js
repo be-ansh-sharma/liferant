@@ -19,6 +19,7 @@ const RichEditor = ({ fieldInput, fieldInputHandler, maxChar, fieldName }) => {
 
   const checkCharacterCount = event => {
     const unprivilegedEditor = quillRef.current.unprivilegedEditor;
+    console.log(unprivilegedEditor.getText());
     if (unprivilegedEditor.getLength() > maxChar && event.key !== 'Backspace')
       event.preventDefault();
   };
