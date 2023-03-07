@@ -24,5 +24,5 @@ export default function Index() {
     );
   }
 
-  return <NewBlog />;
+  return user ? <NewBlog /> : <Loading lines={4} />;
 }

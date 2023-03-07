@@ -10,9 +10,13 @@
   }
   
   .banner {
-    height: 30rem;
+    height: 20rem;
     width: 100%;
     position: relative;
+
+    @include respond-to(tablet) {
+      height: 30rem;
+    }
 
     .image {
       object-fit: contain;
@@ -24,20 +28,19 @@
     font-size: 2rem;
     font-family: "Comfortaa";
     margin-top: 2rem;
+    text-transform: capitalize;
 
     @include respond-to(tablet) {
       font-size: 2.5rem;
+      line-height: 1.2;
     }
   }
 
   .metric {
     font-size: 1rem;
-    margin-bottom: 1rem;
     text-align: center;
 
     @include respond-to(tablet) {
-      position: relative;
-      bottom: 10px;
       font-size: 0.8rem;
     }
 
@@ -48,6 +51,11 @@
 
   .content {
     margin: 2rem 0;
+
+    a {
+      color: var(--main-primary-color);
+      text-decoration: underline;
+    }
   }
 
   .quote {
@@ -55,5 +63,27 @@
     font-style: italic;
     margin: 1rem 0;
     text-align: center;
+  }
+
+  .tags {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    margin: 0.5rem 0;
+
+    .tag {
+      display: flex;
+      font-weight: normal;
+      margin-right: 1rem;
+      .tagitem {
+        color: var(--main-light);
+        background-color: var(--main-primary-color);
+        padding: 0.3rem 0.6rem;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
   }
 }

@@ -1,0 +1,17 @@
+.container {
+  width: 100%;
+
+  @include respond-to(tablet) {
+    width: 50%;
+  }
+
+  .heading {
+    font-size: 1.6rem;
+    margin: 1rem;
+    font-weight: 600;
+  }
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

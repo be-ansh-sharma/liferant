@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 1rem;
+
+  @include respond-to(tablet) {
+    margin: 0;
+  }
+
+  .label {
+    margin-right: 0.5rem;
+  }
+
+  .select {
+    display: flex;
+
+    > div:first-of-type {
+      width: 14rem;
+    }
+  }
+}

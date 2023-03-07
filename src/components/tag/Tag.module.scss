@@ -1,0 +1,46 @@
+.container {
+  width: 40%;
+  display: flex;
+  border: 2px solid var(--main-border-color);
+  text-decoration: none;
+  transition: all .2s ease-in;
+  margin: 1rem;
+  border-radius: 6px;
+  padding: 1rem;
+  flex-direction: column;
+  cursor: pointer;
+  justify-content: space-between;
+
+  @include respond-to(tablet) {
+    width: 25%;
+  }
+
+  &:hover {
+    box-shadow: var(--main-box-shadow);
+    border: 2px solid var(--main-border-hover-color);
+  }
+
+  .title {
+    font-size: 1.1rem;
+    display: flex;
+    background-color: var(--main-primary-color);
+    align-self: flex-start;
+    margin-bottom: 1rem;
+    border-radius: 2px;
+    padding: 0.2rem 0.4rem;
+    color: var(--main-light);
+  }
+
+  .description {
+    font-size: 0.8rem;
+    margin: 0.5rem 0;
+    display: flex;
+    flex-grow: 1;
+    word-break: break-word;
+  }
+
+  .count {
+    padding-top: 0.5rem;
+    font-size: 0.8rem;
+  }
+}

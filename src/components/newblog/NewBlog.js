@@ -24,6 +24,7 @@ const NewBlog = ({ blog }) => {
     metaDescription: blog?.metaDescription || '',
     image: blog?.image || '',
     byline: blog?.byline || '',
+    tags: blog?.tags.join(',') || '',
   });
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState({
@@ -32,6 +33,7 @@ const NewBlog = ({ blog }) => {
     metaDescription: '',
     image: '',
     byline: '',
+    tags: '',
   });
   const router = useRouter();
 
@@ -43,7 +45,7 @@ const NewBlog = ({ blog }) => {
   };
 
   const validateForm = async () => {
-    const { title, content, metaDescription, image, byline } = fieldInput;
+    const { title, content, metaDescription, image, byline, tags } = fieldInput;
 
     if (!title || title.length < 8) {
       setErrorMessage({
@@ -77,12 +79,18 @@ const NewBlog = ({ blog }) => {
       return false;
     }
 
-    console.log('4');
-    console.log(`image is ${!image}`);
     if (!image) {
       setErrorMessage({
         ...errorMessage,
         image: `No Image selected`,
+      });
+      return false;
+    }
+
+    if (tags < 2) {
+      setErrorMessage({
+        ...errorMessage,
+        tags: `Please add tags`,
       });
       return false;
     }
@@ -99,7 +107,7 @@ const NewBlog = ({ blog }) => {
   };
 
   const submitForm = async () => {
-    if (await validateForm()) {
+    if (validateForm()) {
       let fullPath = await uploadImage(fieldInput.image);
       if (!fullPath) {
         setErrorMessage({
@@ -118,6 +126,9 @@ const NewBlog = ({ blog }) => {
           metaDescription: fieldInput.metaDescription,
           imagePath: fullPath,
           byline: fieldInput.byline,
+          likes: blog?.likes || 0,
+          tags: fieldInput.tags.split(','),
+          views: blog?.views || 0,
         },
         !!blog,
         blog?.refId,
@@ -170,6 +181,16 @@ const NewBlog = ({ blog }) => {
               fieldName="content"
             />
             <FormErrorMessage>{errorMessage.description}</FormErrorMessage>
+          </FormControl>
+          <FormControl mt={4} isInvalid={errorMessage.tags}>
+            <FormLabel>Tags</FormLabel>
+            <FormHelperText>Select the tags</FormHelperText>
+            <Input
+              maxLength={300}
+              value={fieldInput.tags}
+              onChange={e => updateForm('tags', e.target.value)}
+            />
+            <FormErrorMessage>{errorMessage.tags}</FormErrorMessage>
           </FormControl>
           <FormControl mt={4} isInvalid={errorMessage.image}>
             <FormLabel>Image</FormLabel>
