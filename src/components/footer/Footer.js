@@ -33,7 +33,7 @@ const Footer = () => {
         <h3 className={styles.heading}>Let Us Help</h3>
         <ul className={styles.list}>
           <li className={styles.item}>
-            <a href="mailto:ntraholic69@gmail.com" target="_top">
+            <a href="mailto:epoch.feedback@gmail.com" target="_top">
               Contact Us
             </a>
           </li>
