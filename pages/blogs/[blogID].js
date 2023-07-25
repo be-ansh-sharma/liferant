@@ -6,11 +6,11 @@ import { useEffect } from 'react';
 import { getBlog, getAllBlogs, updateMetric } from 'services/firebase/Database';
 
 const Index = ({ blog }) => {
-  useEffect(() => {
-    if (blog) {
-      updateMetric('blogs', blog.refId, 'views', 1);
-    }
-  }, [blog]);
+  // useEffect(() => {
+  //   if (blog) {
+  //     updateMetric('blogs', blog.refId, 'views', 1);
+  //   }
+  // }, [blog]);
 
   if (!blog) {
     return <Loading lines={3} />;
