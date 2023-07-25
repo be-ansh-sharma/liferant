@@ -11,7 +11,7 @@ const Index = ({ blog }) => {
       updateMetric('blogs', blog.refId, 'views', 1);
     }
   }, [blog]);
-  
+
   if (!blog) {
     return <Loading lines={3} />;
   }
