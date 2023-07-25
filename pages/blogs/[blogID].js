@@ -2,9 +2,16 @@ import Blog from 'components/blog/Blog';
 import Loading from 'components/loading/Loading';
 import headerconfig from 'config/header.json';
 import Head from 'next/head';
-import { getBlog, getAllBlogs } from 'services/firebase/Database';
+import { useEffect } from 'react';
+import { getBlog, getAllBlogs, updateMetric } from 'services/firebase/Database';
 
 const Index = ({ blog }) => {
+  useEffect(() => {
+    if (blog) {
+      updateMetric('blogs', blog.refId, 'views', 1);
+    }
+  }, [blog]);
+  
   if (!blog) {
     return <Loading lines={3} />;
   }
