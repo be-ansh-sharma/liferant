@@ -239,6 +239,11 @@ const fetchAllTags = async type => {
   return tagsList;
 };
 
+const updateMetric = async (collectionName, refId, key, counter) => {
+  const blogRef = doc(db, collectionName, refId);
+  return await setDoc(blogRef, { [key]: increment(counter) }, { merge: true });
+};
+
 module.exports = {
   getRandomDocument,
   saveDocument,
@@ -249,4 +254,5 @@ module.exports = {
   getDataByTag,
   getTagByID,
   getDataCountByTag,
+  updateMetric,
 };
